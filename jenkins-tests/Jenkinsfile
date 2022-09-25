@@ -19,6 +19,11 @@ pipeline {
         sh 'cd jenkins-tests && npm t'
       }
     }
+    stage('Run tests') {
+      steps {
+        sh 'echo im a slave'
+      }
+    }
     stage('SITH') {
       steps {
         build wait: false, job: 'parameterized', parameters: [text(name: 'SITH_ID', value: 'Vader-$BUILD_ID')]

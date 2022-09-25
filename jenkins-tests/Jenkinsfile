@@ -19,7 +19,7 @@ pipeline {
         sh 'cd jenkins-tests && npm t'
       }
     }
-    stage('Run tests') {
+    stage('fershie') {
       steps {
         sh 'echo im a slave'
       }
